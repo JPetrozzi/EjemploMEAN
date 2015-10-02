@@ -8,7 +8,7 @@
       <script type="text/javascript" src="/javascripts/angularController.js"></script>
    </head>
    <body>
-      <div class="container-fluid" ng-controller="Clientes">
+      <div class="container-fluid" ng-controller="Clientes" ng-init="cargarClientes()">
          <h1> Clientes </h1>
          <form action="javascript:void(0);">
             <div class="row">
@@ -61,8 +61,8 @@
                    <td> {{item.domicilio}} </td>
                    <td> {{item.telefono}} </td>
                    <td> {{item.email}} </td>
-                   <td> <a href="javascript:void(0);" class="btn btn-info btn-xs" ng-click="recuperarCliente($index)"> Editar </a> </td>
-                   <td> <a href="javascript:void(0);" class="btn btn-danger btn-xs" ng-click="eliminarCliente($index)"> Eliminar </a> </td>
+                   <td> <a href="javascript:void(0);" class="btn btn-info btn-xs" ng-click="recuperarCliente(item._id)"> Editar </a> </td>
+                   <td> <a href="javascript:void(0);" class="btn btn-danger btn-xs" ng-click="eliminarCliente(item._id)"> Eliminar </a> </td>
                  </tr>
               </tbody>
            </table>
