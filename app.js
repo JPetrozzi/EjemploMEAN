@@ -51,6 +51,7 @@ app.get('/listar', function(req, res){
       if(error){
          res.send('Error.');
       }else{
+         console.log(clientes);
          res.send(clientes);
       }
    })

@@ -1,6 +1,6 @@
 var aplicacion = angular.module('aplicacion', []);
 
-aplicacion.controller('Clientes', function($scope) {
+aplicacion.controller('Clientes', function($scope,$http) {
    $scope._id = null;
    $scope.nombre = '';
    $scope.apellido = ''
